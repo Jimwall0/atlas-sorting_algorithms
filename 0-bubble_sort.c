@@ -5,13 +5,14 @@
 */
 void bubble_sort(int *array, size_t size)
 {
-	size_t hoop, loop, temp;
+	size_t hoop, temp;
+	int loop = 0, limit = size;
 
 	for (hoop = 0; hoop < size; hoop++)
 	{
-		for (loop = 0; loop < size; loop++)
+		for (loop = 0; loop < limit; loop++)
 		{
-			if (array[loop] <= array[loop + 1])
+			if (array[loop] > array[loop + 1] && (loop + 1) < limit)
 			{
 				temp = array[loop];
 				array[loop] = array[loop + 1];
