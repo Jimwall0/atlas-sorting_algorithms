@@ -1,7 +1,8 @@
 #include "sort.h"
 /**
  * bubble_sort - sorts a data structure
- * 
+ * @array: list of data
+ * @size: limit of the data
 */
 void bubble_sort(int *array, size_t size)
 {
