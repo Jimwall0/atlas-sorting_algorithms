@@ -8,7 +8,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *temp = NULL, *current = (*list);
 	while (current != NULL)
 	{
-		temp = current->prev;
+		temp = current;
 		current = current->next;
 		while (temp->n > current->n)
 		{
@@ -23,7 +23,6 @@ void insertion_sort_list(listint_t **list)
 				temp->next = current->next;
 				temp->prev = current;
 				current->next = temp;
-				temp = NULL;
 				break;
 			}
 			temp->next = current->next;
